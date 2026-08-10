@@ -84,7 +84,7 @@ class DocumentAssistant:
                 self.session_storage_path,
                 f"{self.current_session.session_id}.json"
             )
-            session_dict = self.current_session.dict()
+            session_dict = self.current_session.model_dump()
 
             def serialize_datetime(obj):
                 if isinstance(obj, datetime):
@@ -116,13 +116,11 @@ class DocumentAssistant:
     def process_message(self, user_input: str) -> Dict[str, Any]:
         """Process a user message using the LangGraph workflow."""
 
-#TODO: Complete the config dictionary to set the thread_ud, llm, and tools to the workflow
-        # Refer to README.md Task 2.6 for details
         config = {
             "configurable": {
-                "thread_id": # TODO: Set this to the session id of the current sessions
-                "llm": # TODO Set this to the LLM instance (self.llm)
-                "tools": # TODO Set this to the list of tools
+                "thread_id": self.current_session.session_id,
+                "llm": self.llm,
+                "tools": self.tools
             }
         }
 

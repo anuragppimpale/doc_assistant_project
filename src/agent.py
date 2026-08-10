@@ -197,7 +197,7 @@ def should_continue(state: AgentState) -> str:
     """Router function"""
     return state.get("next_step", "end")
 
-# TODO: Complete the create_workflow function. Refer to README.md Task 2.5
+
 def create_workflow(llm, tools):
     """
     Creates the LangGraph agents.
@@ -205,7 +205,7 @@ def create_workflow(llm, tools):
     """
     workflow = StateGraph(AgentState)
 
-    # TODO: Add all the nodes to the workflow by calling workflow.add_node(...)
+    
     workflow.add_node("classify_intent", classify_intent, config={"configurable": {"llm": llm}})
     workflow.add_node("qa_agent", qa_agent, config={"configurable": {"llm": llm, "tools": tools}})
     workflow.add_node("summarization_agent", summarization_agent, config={"configurable": {"llm": llm, "tools": tools}})

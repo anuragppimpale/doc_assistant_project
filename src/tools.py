@@ -59,15 +59,34 @@ class ToolLogger:
             json.dump(self.logs, f, indent=2)
 
 
-# TODO: Implement the calculator tool using the @tool decorator.
-# This tool should safely evaluate mathematical expressions and log its usage.
-# Refer to README.md Task 4.1 for detailed implementation requirements.
 def create_calculator_tool(logger: ToolLogger):
-    """
-    Creates a calculator tool - TO BE IMPLEMENTED
-    """
-    # Your implementation here
-    pass
+    """Creates a tool for safely evaluating basic mathematical expressions."""
+
+    @tool
+    def calculator(expression: str) -> str:
+        """
+        Evaluate a basic mathematical expression using numbers, parentheses, and +, -, *, or /.
+
+        Args:
+            expression: The mathematical expression to evaluate, for example "(100 + 50) * 0.2".
+
+        Returns:
+            A formatted result or an error message.
+        """
+        try:
+            if not re.fullmatch(r"[0-9+\-*/().\s]+", expression):
+                raise ValueError("Only numbers, parentheses, and basic math operators are allowed.")
+
+            result = eval(expression, {"__builtins__": {}}, {})
+            formatted_result = f"Result: {result}"
+            logger.log_tool_use("calculator", {"expression": expression}, {"result": result})
+            return formatted_result
+        except Exception as e:
+            error_msg = f"Error calculating expression: {str(e)}"
+            logger.log_tool_use("calculator", {"expression": expression}, {"error": error_msg})
+            return error_msg
+
+    return calculator
 
 
 def create_document_search_tool(retriever, logger: ToolLogger):

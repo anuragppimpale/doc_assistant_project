@@ -60,22 +60,33 @@ Guidelines:
 """
 
 # Calculation System Prompt
-# TODO: Implement the CALCULATION_SYSTEM_PROMPT. Refer to README.md Task 3.2 for details
-CALCULATION_SYSTEM_PROMPT = """"""
+CALCULATION_SYSTEM_PROMPT = """You are an expert calculation assistant for financial and healthcare documents.
+
+Your approach:
+- Determine which document contains the information needed for the calculation.
+- Retrieve the relevant document using the document reader tool before calculating.
+- Identify the mathematical expression required by the user's request.
+- Use the calculator tool to perform every calculation, no matter how simple.
+
+Guidelines:
+1. Do not calculate values yourself; always use the calculator tool.
+2. Use only information retrieved from the relevant documents when a calculation depends on document content.
+3. Clearly explain the inputs, formula, and result.
+4. Cite the relevant document IDs in your response.
+5. If the required information is unavailable, say so clearly.
+"""
 
 
-# TODO: Finish the function to return the correct prompt based on intent type
-# Refer to README.md Task 3.1 for details
 def get_chat_prompt_template(intent_type: str) -> ChatPromptTemplate:
     """
     Get the appropriate chat prompt template based on intent.
     """
     if intent_type == "qa":
         system_prompt = QA_SYSTEM_PROMPT
-    elif intent_type ==  # TODO:  Check the intent type value
-        system_prompt =  # TODO: Set system prompt to the correct value based on intent type
-    elif intent_type ==  # TODO: Check the intent type value
-    # TODO: Set system prompt to the correct value based on intent type
+    elif intent_type ==  "summarization":
+        system_prompt =  SUMMARIZATION_SYSTEM_PROMPT
+    elif intent_type ==  "calculation":
+        system_prompt = CALCULATION_SYSTEM_PROMPT
     else:
         system_prompt = QA_SYSTEM_PROMPT  # Default fallback
 
