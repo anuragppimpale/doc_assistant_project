@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-08-10T15:43:51.767175",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "3 + 5 + 9"
+    },
+    "output": "{'result': 17}"
+  },
+  {
+    "timestamp": "2026-08-10T15:44:41.609851",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-001"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  }
+]

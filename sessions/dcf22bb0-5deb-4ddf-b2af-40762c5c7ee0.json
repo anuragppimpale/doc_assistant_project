@@ -1,0 +1,1594 @@
+{
+  "session_id": "dcf22bb0-5deb-4ddf-b2af-40762c5c7ee0",
+  "user_id": "demo_user",
+  "conversation_history": [
+    {
+      "user_input": "hello",
+      "messages": [
+        {
+          "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "22c24799-a64a-4417-8062-fb0924037d32"
+        },
+        {
+          "content": "hello",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 39,
+              "prompt_tokens": 796,
+              "total_tokens": 835,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_f1cc17814f",
+            "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "hello",
+                "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                "confidence": 1.0
+              },
+              "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 796,
+            "output_tokens": 39,
+            "total_tokens": 835,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+          "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+          "artifact": null,
+          "status": "success"
+        }
+      ],
+      "intent": {
+        "intent_type": "unknown",
+        "confidence": 0.3,
+        "reasoning": "The user input 'hello' is a generic greeting and does not provide enough context or information to determine a specific intent related to document processing. Without additional context or a specific request, it is unclear whether the user intends to ask a question, request a summary, or perform a calculation."
+      },
+      "next_step": "end",
+      "conversation_summary": "The assistant greeted the user and offered help with financial or healthcare documents.",
+      "active_documents": [],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "22c24799-a64a-4417-8062-fb0924037d32"
+          },
+          {
+            "content": "hello",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 39,
+                "prompt_tokens": 796,
+                "total_tokens": 835,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_f1cc17814f",
+              "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "hello",
+                  "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                  "confidence": 1.0
+                },
+                "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 796,
+              "output_tokens": 39,
+              "total_tokens": 835,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+            "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+            "artifact": null,
+            "status": "success"
+          }
+        ],
+        "structured_response": {
+          "question": "hello",
+          "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+          "sources": [],
+          "confidence": 1.0,
+          "timestamp": "2026-08-10T21:39:35.635980+00:00"
+        }
+      },
+      "tools_used": [
+        "AnswerResponse"
+      ],
+      "session_id": "dcf22bb0-5deb-4ddf-b2af-40762c5c7ee0",
+      "user_id": "demo_user",
+      "actions_taken": [
+        "classify_intent",
+        "qa_agent"
+      ]
+    },
+    {
+      "user_input": "calculate 3 + 5 + 9",
+      "messages": [
+        {
+          "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "22c24799-a64a-4417-8062-fb0924037d32"
+        },
+        {
+          "content": "hello",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 39,
+              "prompt_tokens": 796,
+              "total_tokens": 835,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_f1cc17814f",
+            "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "hello",
+                "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                "confidence": 1.0
+              },
+              "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 796,
+            "output_tokens": 39,
+            "total_tokens": 835,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+          "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "c3a8966f-e570-47b8-9291-360dd9a36d5e"
+        },
+        {
+          "content": "calculate 3 + 5 + 9",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "6f0591bd-d7f2-445f-a705-af9ea09652fd"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 20,
+              "prompt_tokens": 1062,
+              "total_tokens": 1082,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS4d3fczZEH8qu0sw2HFXLNbSDup",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda1-c8a4-7350-8364-10c5d782902d-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "3 + 5 + 9"
+              },
+              "id": "call_SxA8UVMHR03giuQo6Przfnod",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1062,
+            "output_tokens": 20,
+            "total_tokens": 1082,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 17",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "5cfe8d2a-31d1-44e3-9663-5d3a8e658576",
+          "tool_call_id": "call_SxA8UVMHR03giuQo6Przfnod",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 51,
+              "prompt_tokens": 1093,
+              "total_tokens": 1144,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 1024
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS4eOKjYLsGcDXho3TsnJpS5ShjU",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda1-ccdc-7493-bff8-30cd6a89582c-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "calculate 3 + 5 + 9",
+                "answer": "The result of the calculation 3 + 5 + 9 is 17.",
+                "sources": [],
+                "confidence": 1.0
+              },
+              "id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1093,
+            "output_tokens": 51,
+            "total_tokens": 1144,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1024
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='calculate 3 + 5 + 9' answer='The result of the calculation 3 + 5 + 9 is 17.' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 43, 53, 62137, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "47c5f8da-4c98-47c4-9a38-b5777270f889",
+          "tool_call_id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+          "artifact": null,
+          "status": "success"
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.95,
+        "reasoning": "The user's request 'calculate 3 + 5 + 9' explicitly involves performing a mathematical operation, which falls under the 'calculation' category. The request does not pertain to questions about documents or summarization, making 'calculation' the most appropriate classification."
+      },
+      "next_step": "end",
+      "conversation_summary": "The user greeted the assistant and requested a simple arithmetic calculation of 3 + 5 + 9, which was calculated to be 17.",
+      "active_documents": [],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "c3a8966f-e570-47b8-9291-360dd9a36d5e"
+          },
+          {
+            "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "22c24799-a64a-4417-8062-fb0924037d32"
+          },
+          {
+            "content": "hello",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 39,
+                "prompt_tokens": 796,
+                "total_tokens": 835,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_f1cc17814f",
+              "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "hello",
+                  "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                  "confidence": 1.0
+                },
+                "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 796,
+              "output_tokens": 39,
+              "total_tokens": 835,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+            "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "calculate 3 + 5 + 9",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "6f0591bd-d7f2-445f-a705-af9ea09652fd"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 20,
+                "prompt_tokens": 1062,
+                "total_tokens": 1082,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS4d3fczZEH8qu0sw2HFXLNbSDup",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda1-c8a4-7350-8364-10c5d782902d-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "3 + 5 + 9"
+                },
+                "id": "call_SxA8UVMHR03giuQo6Przfnod",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1062,
+              "output_tokens": 20,
+              "total_tokens": 1082,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 17",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "5cfe8d2a-31d1-44e3-9663-5d3a8e658576",
+            "tool_call_id": "call_SxA8UVMHR03giuQo6Przfnod",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 51,
+                "prompt_tokens": 1093,
+                "total_tokens": 1144,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 1024
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS4eOKjYLsGcDXho3TsnJpS5ShjU",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda1-ccdc-7493-bff8-30cd6a89582c-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "calculate 3 + 5 + 9",
+                  "answer": "The result of the calculation 3 + 5 + 9 is 17.",
+                  "sources": [],
+                  "confidence": 1.0
+                },
+                "id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1093,
+              "output_tokens": 51,
+              "total_tokens": 1144,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='calculate 3 + 5 + 9' answer='The result of the calculation 3 + 5 + 9 is 17.' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 43, 53, 62137, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "47c5f8da-4c98-47c4-9a38-b5777270f889",
+            "tool_call_id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+            "artifact": null,
+            "status": "success"
+          }
+        ],
+        "structured_response": {
+          "question": "calculate 3 + 5 + 9",
+          "answer": "The result of the calculation 3 + 5 + 9 is 17.",
+          "sources": [],
+          "confidence": 1.0,
+          "timestamp": "2026-08-10T21:43:53.062137+00:00"
+        }
+      },
+      "tools_used": [
+        "AnswerResponse",
+        "calculator",
+        "AnswerResponse"
+      ],
+      "session_id": "dcf22bb0-5deb-4ddf-b2af-40762c5c7ee0",
+      "user_id": "demo_user",
+      "actions_taken": [
+        "classify_intent",
+        "qa_agent",
+        "classify_intent",
+        "calculation_agent"
+      ]
+    },
+    {
+      "user_input": "What's the total amount in invoice INV-001?",
+      "messages": [
+        {
+          "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "22c24799-a64a-4417-8062-fb0924037d32"
+        },
+        {
+          "content": "hello",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 39,
+              "prompt_tokens": 796,
+              "total_tokens": 835,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_f1cc17814f",
+            "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "hello",
+                "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                "confidence": 1.0
+              },
+              "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 796,
+            "output_tokens": 39,
+            "total_tokens": 835,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+          "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "c3a8966f-e570-47b8-9291-360dd9a36d5e"
+        },
+        {
+          "content": "calculate 3 + 5 + 9",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "6f0591bd-d7f2-445f-a705-af9ea09652fd"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 20,
+              "prompt_tokens": 1062,
+              "total_tokens": 1082,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS4d3fczZEH8qu0sw2HFXLNbSDup",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda1-c8a4-7350-8364-10c5d782902d-0",
+          "tool_calls": [
+            {
+              "name": "calculator",
+              "args": {
+                "expression": "3 + 5 + 9"
+              },
+              "id": "call_SxA8UVMHR03giuQo6Przfnod",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1062,
+            "output_tokens": 20,
+            "total_tokens": 1082,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Result: 17",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "calculator",
+          "id": "5cfe8d2a-31d1-44e3-9663-5d3a8e658576",
+          "tool_call_id": "call_SxA8UVMHR03giuQo6Przfnod",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 51,
+              "prompt_tokens": 1093,
+              "total_tokens": 1144,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 1024
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS4eOKjYLsGcDXho3TsnJpS5ShjU",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda1-ccdc-7493-bff8-30cd6a89582c-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "calculate 3 + 5 + 9",
+                "answer": "The result of the calculation 3 + 5 + 9 is 17.",
+                "sources": [],
+                "confidence": 1.0
+              },
+              "id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1093,
+            "output_tokens": 51,
+            "total_tokens": 1144,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1024
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='calculate 3 + 5 + 9' answer='The result of the calculation 3 + 5 + 9 is 17.' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 43, 53, 62137, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "47c5f8da-4c98-47c4-9a38-b5777270f889",
+          "tool_call_id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "1d26d4a5-e772-433f-9bb7-ae332002668a"
+        },
+        {
+          "content": "What's the total amount in invoice INV-001?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "26a7af21-3d70-4e07-841d-168919d8a35f"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 17,
+              "prompt_tokens": 1382,
+              "total_tokens": 1399,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS5Rncdxw3rNNQLa23aywU26WXbw",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda2-8bc1-7c91-a935-35172f54037f-0",
+          "tool_calls": [
+            {
+              "name": "document_reader",
+              "args": {
+                "doc_id": "INV-001"
+              },
+              "id": "call_uq5Z59W1a4CNFE4JT4zE65CI",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1382,
+            "output_tokens": 17,
+            "total_tokens": 1399,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_reader",
+          "id": "5d320bc6-74de-4a05-af17-c00207f4545e",
+          "tool_call_id": "call_uq5Z59W1a4CNFE4JT4zE65CI",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 71,
+              "prompt_tokens": 1502,
+              "total_tokens": 1573,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 1280
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_17e3c4f467",
+            "id": "chatcmpl-EBS5SuXmqACaJV3HKHf2Besn54qb0",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019feda2-8f8e-7653-ad62-60e3d723b57f-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "What's the total amount in invoice INV-001?",
+                "answer": "The total amount in invoice INV-001 is $22,000, which includes a subtotal of $20,000 and a tax of $2,000.",
+                "sources": [
+                  "INV-001"
+                ],
+                "confidence": 1.0
+              },
+              "id": "call_ujhTiQh2FsKpZ10LCLulJoEi",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1502,
+            "output_tokens": 71,
+            "total_tokens": 1573,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 1280
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question=\"What's the total amount in invoice INV-001?\" answer='The total amount in invoice INV-001 is $22,000, which includes a subtotal of $20,000 and a tax of $2,000.' sources=['INV-001'] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 44, 43, 44527, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "fbb437c3-8d4d-4466-b020-d661f1db566c",
+          "tool_call_id": "call_ujhTiQh2FsKpZ10LCLulJoEi",
+          "artifact": null,
+          "status": "success"
+        }
+      ],
+      "intent": {
+        "intent_type": "calculation",
+        "confidence": 0.95,
+        "reasoning": "The user's request involves determining the total amount in a specific invoice, which implies a need to perform a calculation based on the document's content. This aligns with the 'calculation' intent, as it requires retrieving and possibly summing numerical values from the invoice."
+      },
+      "next_step": "end",
+      "conversation_summary": "The user greeted the assistant and requested a simple arithmetic calculation of 3 + 5 + 9, which resulted in 17. The user then asked for the total amount in invoice INV-001. The assistant retrieved the document and found that the total amount is $22,000, including a subtotal of $20,000 and a tax of $2,000.",
+      "active_documents": [
+        "INV-001"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "1d26d4a5-e772-433f-9bb7-ae332002668a"
+          },
+          {
+            "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "22c24799-a64a-4417-8062-fb0924037d32"
+          },
+          {
+            "content": "hello",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "5ff68941-36da-4a0e-97f0-d0d61b3dc2c6"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 39,
+                "prompt_tokens": 796,
+                "total_tokens": 835,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_f1cc17814f",
+              "id": "chatcmpl-EBS0Vzs2Tu0tMkRmrZXrpMFCBfgtT",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019fed9d-df8b-71f0-9ee1-13819f8c9a83-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "hello",
+                  "answer": "Hello! How can I assist you today with your financial or healthcare documents?",
+                  "confidence": 1.0
+                },
+                "id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 796,
+              "output_tokens": 39,
+              "total_tokens": 835,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='hello' answer='Hello! How can I assist you today with your financial or healthcare documents?' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 39, 35, 635980, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "acb51d68-ef12-46e5-a30a-c941d078892e",
+            "tool_call_id": "call_kmP8kFt63tXU3EXdR7cz17vp",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "You are an expert calculation assistant for financial and healthcare documents.\n\nYour approach:\n- Determine which document contains the information needed for the calculation.\n- Retrieve the relevant document using the document reader tool before calculating.\n- Identify the mathematical expression required by the user's request.\n- Use the calculator tool to perform every calculation, no matter how simple.\n\nGuidelines:\n1. Do not calculate values yourself; always use the calculator tool.\n2. Use only information retrieved from the relevant documents when a calculation depends on document content.\n3. Clearly explain the inputs, formula, and result.\n4. Cite the relevant document IDs in your response.\n5. If the required information is unavailable, say so clearly.\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "c3a8966f-e570-47b8-9291-360dd9a36d5e"
+          },
+          {
+            "content": "calculate 3 + 5 + 9",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "6f0591bd-d7f2-445f-a705-af9ea09652fd"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 20,
+                "prompt_tokens": 1062,
+                "total_tokens": 1082,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS4d3fczZEH8qu0sw2HFXLNbSDup",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda1-c8a4-7350-8364-10c5d782902d-0",
+            "tool_calls": [
+              {
+                "name": "calculator",
+                "args": {
+                  "expression": "3 + 5 + 9"
+                },
+                "id": "call_SxA8UVMHR03giuQo6Przfnod",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1062,
+              "output_tokens": 20,
+              "total_tokens": 1082,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Result: 17",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "calculator",
+            "id": "5cfe8d2a-31d1-44e3-9663-5d3a8e658576",
+            "tool_call_id": "call_SxA8UVMHR03giuQo6Przfnod",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 51,
+                "prompt_tokens": 1093,
+                "total_tokens": 1144,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 1024
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS4eOKjYLsGcDXho3TsnJpS5ShjU",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda1-ccdc-7493-bff8-30cd6a89582c-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "calculate 3 + 5 + 9",
+                  "answer": "The result of the calculation 3 + 5 + 9 is 17.",
+                  "sources": [],
+                  "confidence": 1.0
+                },
+                "id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1093,
+              "output_tokens": 51,
+              "total_tokens": 1144,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='calculate 3 + 5 + 9' answer='The result of the calculation 3 + 5 + 9 is 17.' sources=[] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 43, 53, 62137, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "47c5f8da-4c98-47c4-9a38-b5777270f889",
+            "tool_call_id": "call_ZKGtdxTcO2Q2jOgpwQ0suoxB",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "What's the total amount in invoice INV-001?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "26a7af21-3d70-4e07-841d-168919d8a35f"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 17,
+                "prompt_tokens": 1382,
+                "total_tokens": 1399,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS5Rncdxw3rNNQLa23aywU26WXbw",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda2-8bc1-7c91-a935-35172f54037f-0",
+            "tool_calls": [
+              {
+                "name": "document_reader",
+                "args": {
+                  "doc_id": "INV-001"
+                },
+                "id": "call_uq5Z59W1a4CNFE4JT4zE65CI",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1382,
+              "output_tokens": 17,
+              "total_tokens": 1399,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Document INV-001:\n\n\n                Invoice #12345\n                Date: 2024-01-15\n                Client: Acme Corporation\n\n                Services Rendered:\n                - Consulting Services: $5,000\n                - Software Development: $12,500\n                - Support & Maintenance: $2,500\n\n                Subtotal: $20,000\n                Tax (10%): $2,000\n\n                Payment Terms: Net 30 days\n                ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_reader",
+            "id": "5d320bc6-74de-4a05-af17-c00207f4545e",
+            "tool_call_id": "call_uq5Z59W1a4CNFE4JT4zE65CI",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 71,
+                "prompt_tokens": 1502,
+                "total_tokens": 1573,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 1280
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_17e3c4f467",
+              "id": "chatcmpl-EBS5SuXmqACaJV3HKHf2Besn54qb0",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019feda2-8f8e-7653-ad62-60e3d723b57f-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "What's the total amount in invoice INV-001?",
+                  "answer": "The total amount in invoice INV-001 is $22,000, which includes a subtotal of $20,000 and a tax of $2,000.",
+                  "sources": [
+                    "INV-001"
+                  ],
+                  "confidence": 1.0
+                },
+                "id": "call_ujhTiQh2FsKpZ10LCLulJoEi",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1502,
+              "output_tokens": 71,
+              "total_tokens": 1573,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 1280
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question=\"What's the total amount in invoice INV-001?\" answer='The total amount in invoice INV-001 is $22,000, which includes a subtotal of $20,000 and a tax of $2,000.' sources=['INV-001'] confidence=1.0 timestamp=datetime.datetime(2026, 8, 10, 21, 44, 43, 44527, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "fbb437c3-8d4d-4466-b020-d661f1db566c",
+            "tool_call_id": "call_ujhTiQh2FsKpZ10LCLulJoEi",
+            "artifact": null,
+            "status": "success"
+          }
+        ],
+        "structured_response": {
+          "question": "What's the total amount in invoice INV-001?",
+          "answer": "The total amount in invoice INV-001 is $22,000, which includes a subtotal of $20,000 and a tax of $2,000.",
+          "sources": [
+            "INV-001"
+          ],
+          "confidence": 1.0,
+          "timestamp": "2026-08-10T21:44:43.044527+00:00"
+        }
+      },
+      "tools_used": [
+        "AnswerResponse",
+        "calculator",
+        "AnswerResponse",
+        "document_reader",
+        "AnswerResponse"
+      ],
+      "session_id": "dcf22bb0-5deb-4ddf-b2af-40762c5c7ee0",
+      "user_id": "demo_user",
+      "actions_taken": [
+        "classify_intent",
+        "qa_agent",
+        "classify_intent",
+        "calculation_agent",
+        "classify_intent",
+        "calculation_agent"
+      ]
+    }
+  ],
+  "document_context": [
+    "INV-001"
+  ],
+  "created_at": "2026-08-10T15:39:10.074166",
+  "last_updated": "2026-08-10T15:44:45.043674"
+}
