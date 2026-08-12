@@ -1,29 +1,170 @@
 
-from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder, PromptTemplate, SystemMessagePromptTemplate
+from langchain_core.prompts import FewShotPromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder, PromptTemplate, SystemMessagePromptTemplate
 
 
-def get_intent_classification_prompt() -> PromptTemplate:
+def get_intent_classification_prompt() -> FewShotPromptTemplate:
     """
     Get the intent classification prompt template.
     """
-    return PromptTemplate(
-        input_variables=["user_input", "conversation_history"],
-        template="""You are an intent classifier for a document processing assistant.
+    intent_examples = [
+        {
+            "user_input": "What's the total amount in invoice INV-001?",
+            "intent": "qa",
+            "confidence": "0.98",
+            "reasoning": (
+                "The user is asking for a specific factual value from the document and no calculation is required."
+            ),
+        },
+        {
+            "user_input": "Who is the client on INV-002?",
+            "intent": "qa",
+            "confidence": "0.98",
+            "reasoning": (
+                "The user is asking for a specific piece of information contained in the document."
+            ),
+        },
+        {
+            "user_input": "Give me the key points of CON-001",
+            "intent": "summarization",
+            "confidence": "0.88",
+            "reasoning": (
+                "The user is asking to identify and extract the main points from the document."
+            ),
+        },
+        {
+            "user_input": "Summarize all contracts",
+            "intent": "summarization",
+            "confidence": "0.80",
+            "reasoning": (
+                "The user explicitly asks for a summary of the document rather than a specific fact or calculation."
+            ),
+        },
+        {
+            "user_input": "What was the percentage increase in revenue from 2024 to 2025?",
+            "intent": "calculation",
+            "confidence": "0.99",
+            "reasoning": (
+                "The user is asking for a percentage change, which requires a mathematical calculation using values from the document."
+            ),
+        },
+        {
+            "user_input": "What is the combined total of all invoices?",
+            "intent": "calculation",
+            "confidence": "0.99",
+            "reasoning": (
+                "The user explicitly requests a mathematical calculation using numerical information from the document."
+            ),
+        },
+        {
+            "user_input": "Tell me something interesting.",
+            "intent": "unknown",
+            "confidence": "0.15",
+            "reasoning": (
+                "The request is too vague to determine whether the user wants a document question, summary, or calculation."
+            ),
+        },
+    ]
+    example_prompt = PromptTemplate(
+        input_variables=[
+            "user_input",
+            "intent",
+            "confidence",
+            "reasoning",
+        ],
+        template="""User Input: {user_input}
+    Intent: {intent}
+    Confidence: {confidence}
+    Reasoning: {reasoning}""",
+    )
+    return FewShotPromptTemplate(
+    examples=intent_examples,
+    example_prompt=example_prompt,
 
-Given the user input and conversation history, classify the user's intent into one of these categories:
-- qa: Questions about documents or records that do not require calculations.
-- summarization: Requests to summarize or extract key points from documents that do not require calculations.
-- calculation: Mathematical operations or numerical computations. Or questions about documents that may require calculations
-- unknown: Cannot determine the intent clearly
+    prefix="""You are an intent classifier for a document processing assistant.
 
-User Input: {user_input}
+Your task is to classify the user's request into exactly one of these
+intent categories:
+
+- qa: Questions about documents or records that do not require calculations. Retrieving a fact, figure, date, or party that is already stated in a document, including totals printed on the document.
+- summarization: Requests to summarize or extract key points from documents that do not require calculations. Condensing one or more documents into key points.
+- calculation: Mathematical operations or numerical computations, OR questions about documents that require calculations. The answer requires arithmetic that is not already printed — sums across multiple documents, percentages, differences, or standalone math.
+- unknown: The intent cannot be reliably determined. Greetings, small talk, or requests where no category applies.
+
+Classification rules:
+
+1. Choose "calculation" whenever answering the request requires a
+   mathematical calculation, even if the request also involves
+   document questions or summarization.
+
+2. Choose "qa" when the user wants a specific fact, value, entity,
+   or piece of information from the document and no calculation
+   is required.
+
+3. Choose "summarization" when the user wants a summary, overview,
+   key points, findings, risks, or other condensed representation
+   of document content and no calculation is required.
+
+4. Choose "unknown" when the request is too vague, ambiguous, or
+   does not clearly fit any of the above categories.
+
+Confidence scoring:
+
+Confidence represents your certainty that the selected INTENT is correct,
+given the user input and available conversation history.
+
+It does NOT represent confidence that the eventual answer will be correct.
+
+Use the following scale:
+
+- 0.90-1.00: Very high confidence. The intent is explicit and there is
+  little or no plausible alternative.
+
+- 0.75-0.89: High confidence. The intent is clear, with only minor
+  ambiguity.
+
+- 0.50-0.74: Moderate confidence. The selected intent is plausible,
+  but another intent is reasonably possible.
+
+- 0.25-0.49: Low confidence. The request is significantly ambiguous
+  and multiple intents are plausible.
+
+- 0.00-0.24: Very low confidence. There is insufficient information
+  to reliably determine the intent.
+
+When the intent cannot be reliably determined, use "unknown".
+When intent is "unknown", confidence should normally be below 0.50.
+
+Use the conversation history to resolve references such as "it",
+"that report", "the previous document", or "calculate that".
+
+Here are examples of correctly classified requests:
+
+""",
+
+    suffix="""
+
+Now classify the following user request.
+
+User Input:
+{user_input}
 
 Recent Conversation History:
 {conversation_history}
 
-Analyze the user's request and classify their intent with a confidence score and brief reasoning.
-"""
-    )
+Determine the single best intent category.
+
+Return:
+- intent_type: qa, summarization, calculation, or unknown
+- confidence: a value between 0.0 and 1.0 following the confidence
+  scoring guidelines above
+- reasoning: a brief explanation supporting the classification
+""",
+
+    input_variables=[
+        "user_input",
+        "conversation_history",
+    ],
+)
 
 # Q&A System Prompt
 QA_SYSTEM_PROMPT = """You are a helpful document assistant specializing in answering questions about financial and healthcare documents.
