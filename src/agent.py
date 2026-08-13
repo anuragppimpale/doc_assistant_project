@@ -3,7 +3,7 @@ from typing import TypedDict, Annotated, List, Dict, Any, Optional, Literal
 from langgraph.graph.message import add_messages
 from langchain.agents import create_agent
 from prompt_toolkit import prompt
-from schemas import UserIntent, AnswerResponse, UpdateMemoryResponse
+from schemas import CalculationResponse, SummarizationResponse, UserIntent, AnswerResponse, UpdateMemoryResponse
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage, ToolMessage
 from prompts import get_intent_classification_prompt, get_chat_prompt_template, MEMORY_SUMMARY_PROMPT
 from langchain_core.runnables import RunnableConfig
@@ -113,7 +113,7 @@ def summarization_agent(state: AgentState, config: RunnableConfig) -> AgentState
         "chat_history": state.get("messages", []),
     }).to_messages()
 
-    result, tools_used = invoke_agent(AnswerResponse, messages, llm, tools)
+    result, tools_used = invoke_agent(SummarizationResponse, messages, llm, tools)
 
     return {
         "messages": result.get("messages", []),
@@ -139,7 +139,7 @@ def calculation_agent(state: AgentState, config: RunnableConfig) -> AgentState:
         "chat_history": state.get("messages", []),
     }).to_messages()
 
-    result, tools_used = invoke_agent(AnswerResponse, messages, llm, tools)
+    result, tools_used = invoke_agent(CalculationResponse, messages, llm, tools)
 
     return {
         "messages": result.get("messages", []),
@@ -163,7 +163,7 @@ Dict[str, Any], List[str]]:
     )
 
     result = agent.invoke({"messages": messages})
-    tools_used = [t.name for t in result.get("messages", []) if isinstance(t, ToolMessage)]
+    tools_used = [t.name for t in result.get("messages", []) if (isinstance(t, ToolMessage) and t.name in [tool.name for tool in tools])]
 
     return result, tools_used
 

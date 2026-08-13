@@ -1,0 +1,383 @@
+{
+  "session_id": "7412883e-e0af-4cf0-a546-e54c3dd3f112",
+  "user_id": "demo_user",
+  "conversation_history": [
+    {
+      "user_input": "Find documents with amounts over $50,000",
+      "messages": [
+        {
+          "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "system",
+          "name": null,
+          "id": "ff5b8b70-6777-4215-a2de-94903952cb02"
+        },
+        {
+          "content": "Find documents with amounts over $50,000",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "e3587b32-440a-4800-a45a-69eafc4b88ec"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 33,
+              "prompt_tokens": 804,
+              "total_tokens": 837,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_f1cc17814f",
+            "id": "chatcmpl-EC8cTe60skJFXAyOxrmoMW9zDbMIJ",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019ff761-4c71-7da1-b99c-2a03a64ecd78-0",
+          "tool_calls": [
+            {
+              "name": "document_search",
+              "args": {
+                "query": "documents over $50,000",
+                "search_type": "amount",
+                "comparison": "over",
+                "amount": 50000
+              },
+              "id": "call_a7BBY2nXV8WVSSaDFSf1Kk8i",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 804,
+            "output_tokens": 33,
+            "total_tokens": 837,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "document_search",
+          "id": "8524f199-64bf-480b-ac79-845ce7ca6206",
+          "tool_call_id": "call_a7BBY2nXV8WVSSaDFSf1Kk8i",
+          "artifact": null,
+          "status": "success"
+        },
+        {
+          "content": "",
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 221,
+              "prompt_tokens": 1102,
+              "total_tokens": 1323,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": null,
+                "cached_tokens": 0
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "gpt-4o-2024-08-06",
+            "system_fingerprint": "fp_f1cc17814f",
+            "id": "chatcmpl-EC8cVkBgclEhqZJvyGumpKrMKNxPu",
+            "service_tier": "default",
+            "finish_reason": "tool_calls",
+            "logprobs": null
+          },
+          "type": "ai",
+          "name": null,
+          "id": "lc_run--019ff761-5205-7130-8222-3fc4853c022f-0",
+          "tool_calls": [
+            {
+              "name": "AnswerResponse",
+              "args": {
+                "question": "Find documents with amounts over $50,000",
+                "answer": "I found three documents with amounts over $50,000:\n\n1. **Invoice #12347** (ID: INV-003)\n   - Type: Invoice\n   - Amount: $214,500.00\n   - Date: 2024-03-01\n   - Client: Global Corp\n\n2. **Service Agreement** (ID: CON-001)\n   - Type: Contract\n   - Amount: $180,000.00\n   - Date: January 1, 2024\n   - Provider: DocDacity Solutions Inc.\n\n3. **Invoice #12346** (ID: INV-002)\n   - Type: Invoice\n   - Amount: $69,300.00\n   - Date: 2024-02-20\n   - Client: TechStart Inc.",
+                "sources": [
+                  "INV-003",
+                  "CON-001",
+                  "INV-002"
+                ],
+                "confidence": 0.95
+              },
+              "id": "call_yvS2W7g5iqUhW0Xz6tjoNUM2",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "input_tokens": 1102,
+            "output_tokens": 221,
+            "total_tokens": 1323,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        },
+        {
+          "content": "Returning structured response: question='Find documents with amounts over $50,000' answer='I found three documents with amounts over $50,000:\\n\\n1. **Invoice #12347** (ID: INV-003)\\n   - Type: Invoice\\n   - Amount: $214,500.00\\n   - Date: 2024-03-01\\n   - Client: Global Corp\\n\\n2. **Service Agreement** (ID: CON-001)\\n   - Type: Contract\\n   - Amount: $180,000.00\\n   - Date: January 1, 2024\\n   - Provider: DocDacity Solutions Inc.\\n\\n3. **Invoice #12346** (ID: INV-002)\\n   - Type: Invoice\\n   - Amount: $69,300.00\\n   - Date: 2024-02-20\\n   - Client: TechStart Inc.' sources=['INV-003', 'CON-001', 'INV-002'] confidence=0.95 timestamp=datetime.datetime(2026, 8, 12, 19, 9, 41, 945069, tzinfo=datetime.timezone.utc)",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "AnswerResponse",
+          "id": "72d8d936-8816-42b0-aef4-51a6938817a8",
+          "tool_call_id": "call_yvS2W7g5iqUhW0Xz6tjoNUM2",
+          "artifact": null,
+          "status": "success"
+        }
+      ],
+      "intent": {
+        "intent_type": "qa",
+        "confidence": 0.85,
+        "reasoning": "The user is requesting to identify documents based on a specific criterion (amounts over $50,000). This involves retrieving documents that meet this condition, which aligns with the 'qa' category as it involves querying for specific information without requiring calculations."
+      },
+      "next_step": "end",
+      "conversation_summary": "The user requested documents with amounts over $50,000. Three documents were found:\n1. Invoice #12347 (ID: INV-003) for $214,500.00, dated 2024-03-01, for Global Corp.\n2. Service Agreement (ID: CON-001) for $180,000.00, dated January 1, 2024, with DocDacity Solutions Inc.\n3. Invoice #12346 (ID: INV-002) for $69,300.00, dated 2024-02-20, for TechStart Inc.",
+      "active_documents": [
+        "INV-003",
+        "CON-001",
+        "INV-002"
+      ],
+      "current_response": {
+        "messages": [
+          {
+            "content": "You are a helpful document assistant specializing in answering questions about financial and healthcare documents.\n\nYour capabilities:\n- Answer specific questions about document content\n- Cite sources accurately\n- Provide clear, concise answers\n- Use available tools to search and read documents\n\nGuidelines:\n1. Always search for relevant documents before answering\n2. Cite specific document IDs when referencing information\n3. If information is not found, say so clearly\n4. Be precise with numbers and dates\n5. Maintain professional tone\n\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": "ff5b8b70-6777-4215-a2de-94903952cb02"
+          },
+          {
+            "content": "Find documents with amounts over $50,000",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": "e3587b32-440a-4800-a45a-69eafc4b88ec"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 33,
+                "prompt_tokens": 804,
+                "total_tokens": 837,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_f1cc17814f",
+              "id": "chatcmpl-EC8cTe60skJFXAyOxrmoMW9zDbMIJ",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019ff761-4c71-7da1-b99c-2a03a64ecd78-0",
+            "tool_calls": [
+              {
+                "name": "document_search",
+                "args": {
+                  "query": "documents over $50,000",
+                  "search_type": "amount",
+                  "comparison": "over",
+                  "amount": 50000
+                },
+                "id": "call_a7BBY2nXV8WVSSaDFSf1Kk8i",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 804,
+              "output_tokens": 33,
+              "total_tokens": 837,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Found 3 document(s):\n\nDocument 1 (ID: INV-003):\nTitle: Invoice #12347\nType: invoice\nAmount: $214,500.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12347\n                Date: 2024-03-01\n                Client: Global Corp\n\n                Services:\n                - Annual Subscription: $120,000\n                - Premiu...\n--------------------------------------------------\nDocument 2 (ID: CON-001):\nTitle: Service Agreement\nType: contract\nAmount: $180,000.00\nRelevance Score: 1.00\nPreview: \n                SERVICE AGREEMENT\n\n                This Service Agreement is entered into on January 1, 2024, between:\n                - Provider: DocDacity Solutions Inc.\n                - Client: H...\n--------------------------------------------------\nDocument 3 (ID: INV-002):\nTitle: Invoice #12346\nType: invoice\nAmount: $69,300.00\nRelevance Score: 1.00\nPreview: \n                Invoice #12346\n                Date: 2024-02-20\n                Client: TechStart Inc.\n\n                Products:\n                - Enterprise License (Annual): $50,000\n              ...\n--------------------------------------------------\n",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "document_search",
+            "id": "8524f199-64bf-480b-ac79-845ce7ca6206",
+            "tool_call_id": "call_a7BBY2nXV8WVSSaDFSf1Kk8i",
+            "artifact": null,
+            "status": "success"
+          },
+          {
+            "content": "",
+            "additional_kwargs": {
+              "refusal": null
+            },
+            "response_metadata": {
+              "token_usage": {
+                "completion_tokens": 221,
+                "prompt_tokens": 1102,
+                "total_tokens": 1323,
+                "completion_tokens_details": {
+                  "accepted_prediction_tokens": 0,
+                  "audio_tokens": 0,
+                  "reasoning_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                },
+                "prompt_tokens_details": {
+                  "audio_tokens": 0,
+                  "cache_write_tokens": null,
+                  "cached_tokens": 0
+                }
+              },
+              "model_provider": "openai",
+              "model_name": "gpt-4o-2024-08-06",
+              "system_fingerprint": "fp_f1cc17814f",
+              "id": "chatcmpl-EC8cVkBgclEhqZJvyGumpKrMKNxPu",
+              "service_tier": "default",
+              "finish_reason": "tool_calls",
+              "logprobs": null
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--019ff761-5205-7130-8222-3fc4853c022f-0",
+            "tool_calls": [
+              {
+                "name": "AnswerResponse",
+                "args": {
+                  "question": "Find documents with amounts over $50,000",
+                  "answer": "I found three documents with amounts over $50,000:\n\n1. **Invoice #12347** (ID: INV-003)\n   - Type: Invoice\n   - Amount: $214,500.00\n   - Date: 2024-03-01\n   - Client: Global Corp\n\n2. **Service Agreement** (ID: CON-001)\n   - Type: Contract\n   - Amount: $180,000.00\n   - Date: January 1, 2024\n   - Provider: DocDacity Solutions Inc.\n\n3. **Invoice #12346** (ID: INV-002)\n   - Type: Invoice\n   - Amount: $69,300.00\n   - Date: 2024-02-20\n   - Client: TechStart Inc.",
+                  "sources": [
+                    "INV-003",
+                    "CON-001",
+                    "INV-002"
+                  ],
+                  "confidence": 0.95
+                },
+                "id": "call_yvS2W7g5iqUhW0Xz6tjoNUM2",
+                "type": "tool_call"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "input_tokens": 1102,
+              "output_tokens": 221,
+              "total_tokens": 1323,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          },
+          {
+            "content": "Returning structured response: question='Find documents with amounts over $50,000' answer='I found three documents with amounts over $50,000:\\n\\n1. **Invoice #12347** (ID: INV-003)\\n   - Type: Invoice\\n   - Amount: $214,500.00\\n   - Date: 2024-03-01\\n   - Client: Global Corp\\n\\n2. **Service Agreement** (ID: CON-001)\\n   - Type: Contract\\n   - Amount: $180,000.00\\n   - Date: January 1, 2024\\n   - Provider: DocDacity Solutions Inc.\\n\\n3. **Invoice #12346** (ID: INV-002)\\n   - Type: Invoice\\n   - Amount: $69,300.00\\n   - Date: 2024-02-20\\n   - Client: TechStart Inc.' sources=['INV-003', 'CON-001', 'INV-002'] confidence=0.95 timestamp=datetime.datetime(2026, 8, 12, 19, 9, 41, 945069, tzinfo=datetime.timezone.utc)",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "AnswerResponse",
+            "id": "72d8d936-8816-42b0-aef4-51a6938817a8",
+            "tool_call_id": "call_yvS2W7g5iqUhW0Xz6tjoNUM2",
+            "artifact": null,
+            "status": "success"
+          }
+        ],
+        "structured_response": {
+          "question": "Find documents with amounts over $50,000",
+          "answer": "I found three documents with amounts over $50,000:\n\n1. **Invoice #12347** (ID: INV-003)\n   - Type: Invoice\n   - Amount: $214,500.00\n   - Date: 2024-03-01\n   - Client: Global Corp\n\n2. **Service Agreement** (ID: CON-001)\n   - Type: Contract\n   - Amount: $180,000.00\n   - Date: January 1, 2024\n   - Provider: DocDacity Solutions Inc.\n\n3. **Invoice #12346** (ID: INV-002)\n   - Type: Invoice\n   - Amount: $69,300.00\n   - Date: 2024-02-20\n   - Client: TechStart Inc.",
+          "sources": [
+            "INV-003",
+            "CON-001",
+            "INV-002"
+          ],
+          "confidence": 0.95,
+          "timestamp": "2026-08-12T19:09:41.945069+00:00"
+        }
+      },
+      "tools_used": [
+        "document_search",
+        "AnswerResponse"
+      ],
+      "session_id": "7412883e-e0af-4cf0-a546-e54c3dd3f112",
+      "user_id": "demo_user",
+      "actions_taken": [
+        "classify_intent",
+        "qa_agent"
+      ]
+    }
+  ],
+  "document_context": [
+    "INV-003",
+    "CON-001",
+    "INV-002"
+  ],
+  "created_at": "2026-08-12T13:09:26.215655",
+  "last_updated": "2026-08-12T13:09:44.726671"
+}

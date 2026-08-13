@@ -157,7 +157,7 @@ class DocumentAssistant:
                 self._save_session()
             return {
                 "success": True,
-                "response": final_state.get("messages")[-1].content if final_state.get("messages") else None,
+                "response": final_state['current_response']['structured_response'].answer if final_state['current_response']['structured_response'].answer else final_state.get("messages")[-1].content if final_state.get("messages") else None,
                 "intent": final_state.get("intent").dict() if final_state.get("intent") else None,
                 "tools_used": final_state.get("tools_used", []),
                 "sources": final_state.get("active_documents", []),

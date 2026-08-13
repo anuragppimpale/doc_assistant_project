@@ -1,0 +1,78 @@
+[
+  {
+    "timestamp": "2026-08-12T14:10:28.953224",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-002"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2026-08-12T14:11:47.324155",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-001"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2026-08-12T14:12:13.485171",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-001"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2026-08-12T14:12:13.491206",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "INV-002"
+    },
+    "output": "{'found': True, 'doc_type': 'invoice'}"
+  },
+  {
+    "timestamp": "2026-08-12T14:12:19.101392",
+    "tool_name": "calculator",
+    "input": {
+      "expression": "22000 + 69300"
+    },
+    "output": "{'result': 91300}"
+  },
+  {
+    "timestamp": "2026-08-12T14:21:09.276076",
+    "tool_name": "document_search",
+    "input": {
+      "query": "contracts",
+      "search_type": "type",
+      "doc_type": "contract",
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": null,
+      "amount": null
+    },
+    "output": "{'results_count': 1}"
+  },
+  {
+    "timestamp": "2026-08-12T14:21:10.546038",
+    "tool_name": "document_reader",
+    "input": {
+      "doc_id": "CON-001"
+    },
+    "output": "{'found': True, 'doc_type': 'contract'}"
+  },
+  {
+    "timestamp": "2026-08-12T14:23:19.451302",
+    "tool_name": "document_search",
+    "input": {
+      "query": "documents over $50,000",
+      "search_type": "amount",
+      "doc_type": null,
+      "min_amount": null,
+      "max_amount": null,
+      "comparison": "over",
+      "amount": 50000.0
+    },
+    "output": "{'results_count': 3}"
+  }
+]

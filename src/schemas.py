@@ -15,7 +15,7 @@ class DocumentChunk(BaseModel):
 class SummarizationResponse(BaseModel):
     """Structured response for summarization tasks"""
     original_length: int = Field(description="Length of original text")
-    summary: str = Field(description="The generated summary")
+    answer: str = Field(description="The generated summary")
     key_points: List[str] = Field(description="List of key points extracted")
     document_ids: List[str] = Field(default_factory=lambda: list, description="Documents summarized")
     timestamp: datetime = Field(default_factory=datetime.now)
@@ -24,7 +24,7 @@ class SummarizationResponse(BaseModel):
 class CalculationResponse(BaseModel):
     """Structured response for calculation tasks"""
     expression: str = Field(description="The mathematical expression")
-    result: float = Field(description="The calculated result")
+    answer: float = Field(description="The calculated result")
     explanation: str = Field(description="Step-by-step explanation")
     units: Optional[str] = Field(default=None, description="Units if applicable")
     timestamp: datetime = Field(default_factory=datetime.now)
